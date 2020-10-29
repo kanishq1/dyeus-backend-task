@@ -52,18 +52,7 @@ db.connectDb = async () => {
 
 db.sequelize = sequelize;
 db.Sequelize = DataTypes;
-
-//Models/tables
-db.login = require("./login.js")(sequelize, Sequelize);
-db.services = require("./services.js")(sequelize, Sequelize);
-db.provider_service = require("./provider_service")(sequelize, Sequelize);
-db.request = require("./request")(sequelize, Sequelize);
-db.community = require("./community")(sequelize, Sequelize);
-db.user_community = require("./user_community")(sequelize, Sequelize);
 db.order = require("./order")(sequelize, Sequelize);
-// db.permissions = require('./permissions.js')(sequelize, Sequelize);
-// db.policy = require('./policy.js')(sequelize, Sequelize);
-db.kv = require("./kvStore.js")(sequelize, Sequelize);
 
 //Relations
 // db.profile.belongsTo(db.login, {onDelete: "CASCADE"});
